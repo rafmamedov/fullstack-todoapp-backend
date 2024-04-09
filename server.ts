@@ -21,7 +21,6 @@ if (!mongoURI) {
   process.exit(1);
 }
 
-// Підключення до MongoDB за допомогою Mongoose
 mongoose.connect(mongoURI)
 .then(() => console.log("Connected to DB"))
 .catch(console.error);
