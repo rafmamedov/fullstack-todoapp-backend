@@ -33,14 +33,22 @@ This backend API is developed using Node.js and Express.js, with MongoDB as the 
 1. **Clone the Repository:**
    ```bash
    git clone <repository_url>
+   ```
 2. **Install Dependencies:**
-   ```npm install
+   ```bash
+   npm install
+   ```
 3. **Install Dependencies:**
-  Create a .env file and add the following:
-  ```MONGODB_URI=<your_mongodb_uri>
+    Create a .env file and add the following:
+    ```bash
+    MONGODB_URI=<your_mongodb_uri>
     PORT=<port_number>
-4. **Start the Server:**
-   ```npm start
+    ```
 
-4. **Access the API Endpoints:**
-  Use tools like Postman or cURL to interact with the API endpoints described above, or install Rest Client Extension in VSCode.
+4. **Start the Server:**
+     ```bash
+     npm start
+     ```
+
+5. **Access the API Endpoints:**
+   Use tools like Postman or cURL to interact with the API endpoints described above, or install Rest Client Extension in VSCode.
