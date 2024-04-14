@@ -44,7 +44,7 @@ app.post('/todos', async (req, res) => {
 });
 
 app.post('/todos/add', async (req, res) => {
-  const { boardId, text, description } = req.body;
+  const { boardId, text, description, index } = req.body;
 
   if (!boardId || !text) {
     return res.status(400).json({ message: "Missing required fields" });
@@ -57,7 +57,7 @@ app.post('/todos/add', async (req, res) => {
       return res.status(404).json({ message: "Board not found" });
     }
 
-    const newTodo = new Todo({ text, description, boardId });
+    const newTodo = new Todo({ text, description, index, boardId });
 
     await newTodo.save();
 
@@ -120,12 +120,12 @@ app.delete('/todos/delete/:boardId/:todoId', async (req, res) => {
 
 app.put('/todos/update/:todoId', async (req, res) => {
   const { todoId } = req.params;
-  const { text, description, complete, inProcess } = req.body;
+  const { text, description, complete, inProcess, index } = req.body;
 
   try {
     const updatedTodo = await Todo.findByIdAndUpdate(
       todoId,
-      { text, description, complete, inProcess },
+      { text, description, complete, inProcess, index },
       { new: true },
     );
 

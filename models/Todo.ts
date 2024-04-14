@@ -25,6 +25,10 @@ const TodoSchema = new Schema({
   boardId: {
     type: String,
     required: true,
+  },
+  index: {
+    type: Number,
+    required: false,
   }
 });
 
