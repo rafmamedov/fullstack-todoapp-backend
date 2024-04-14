@@ -26,10 +26,6 @@ const TodoSchema = new Schema({
     type: String,
     required: true,
   },
-  index: {
-    type: Number,
-    required: false,
-  }
 });
 
 export const Todo = mongoose.model("Todo", TodoSchema);
